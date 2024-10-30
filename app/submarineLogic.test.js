@@ -13,7 +13,6 @@ test('expects depth of 2 and position of 2', () => {
     expect(result.position).toBe(2);
     expect(result.total).toBe(4);
     expect(result.error).toBe(false);
-    expect(result.errorOnEntry).toBe("No Error");
 });
 
 test('expects numbers to match example', () => {
@@ -23,7 +22,6 @@ test('expects numbers to match example', () => {
     expect(result.position).toBe(15);
     expect(result.total).toBe(150);
     expect(result.error).toBe(false);
-    expect(result.errorOnEntry).toBe("No Error");
 });
 
 test('expects numbers to match example with negative final number', () => {
@@ -33,7 +31,6 @@ test('expects numbers to match example with negative final number', () => {
     expect(result.position).toBe(11);
     expect(result.total).toBe(110);
     expect(result.error).toBe(false);
-    expect(result.errorOnEntry).toBe("No Error");
 });
 
 test('expects error when invalid direction is provided', () => {
@@ -43,5 +40,4 @@ test('expects error when invalid direction is provided', () => {
     expect(result.position).toBe(0);
     expect(result.total).toBe(0);
     expect(result.error).toBe(true);
-    expect(result.errorOnEntry).toBe(2);
 });

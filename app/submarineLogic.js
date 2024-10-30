@@ -9,31 +9,29 @@ function getInput(fileName) {
 function getTotals (input) {
     let depth = 0;
     let position = 0;
-    let error = false
-    let errorEntryNumber
-    let entries = 0
+    let error = false;
+    let entries = 0;
     var BreakException = {};
 
     try{
         input.forEach(entry => {
-            entries ++
+            entries ++;
             const splitEntry = entry.split(' ');
             let direction = splitEntry[0];
             let number = Number(splitEntry[1]);
 
             switch (direction) {
                 case 'down':
-                    depth += number
-                    break
+                    depth += number;
+                    break;
                 case 'up':
-                    depth -= number
-                    break
+                    depth -= number;
+                    break;
                 case 'forward':
-                    position += number
-                    break
+                    position += number;
+                    break;
                 default:
-                    error = true
-                    errorEntryNumber = input.indexOf(entry) + 1
+                    error = true;
                     console.log('Error: Incorrect direction');
             }
 
@@ -51,8 +49,7 @@ function getTotals (input) {
         depth,
         total,
         entries,
-        error,
-        errorOnEntry: errorEntryNumber ?? "No Error"
+        error
     }
 
     return returnObject;
